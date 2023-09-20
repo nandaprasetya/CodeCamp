@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCamp | Sign Up</title>
+    <link rel="shortcut icon" href="img/logo/Codecamp.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <style>
+        .signup form{
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 20px;
+    background-color: #fff;
+}
+
+.signup form a{
+    font-size: 25px;
+    margin: 10px 0px;
+    color: rgb(228, 0, 0);
+    text-align: end;
+    float: right;
+    width: 90%;
+}
+
+.login form h1, .signup form h1{
+    font-size: 30px;
+    color: #ffde3e;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.signup form p{
+    font-size: 14px;
+    color: #4e4e4e;
+    margin: 8px 0px;
+}
+
+.signup button{
+    padding: 10px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 15px;
+    border: none;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+
+.signup a{
+    text-decoration: none;
+}
+
+.signup button img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.signup form input{
+    outline: none;
+    width: 85%;
+    height: 30px;
+    padding: 5px 0px;
+    margin: 7px 0px;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.text-login{
+    display: flex;
+    align-items: center;
+}
+.signup{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 100vh;
+    position: fixed;
+}
+
+#video-login{
+    left: 200px;
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .signup{
+        height: 100%;
+    }
+
+    .signup form{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .signup form{
+        width: 320px;
+     }
+
+     .signup form h1{
+        font-size: 20px;
+     }
+
+     .signup form p{
+        font-size: 12px;
+     }
+
+     .signup button{
+        font-size: 12px;
+     }
+}
+    </style>
+    <video id="video-login" playsinline muted autoplay loop src="img/login.mp4">
+        <source src="img/login.mp4" type="video/mp4">
+    </video>
+    <div class="signup container">
+        <form action="">
+            <a href="index.html"><img src="img/icons/close.png" style="width: 25px; height: 25px;" alt=""></a>
+            <h1>Masukan Data Diri</h1>
+            <p>Masukan Data Diri Anda dengan Benar</p>
+            <input type="text" placeholder="Masukan Nama Anda">
+            <input type="email" placeholder="Masukan Email Anda">
+            <input type="password" placeholder="Masukan Password Anda">
+            <input type="number" placeholder="Masukan Umur Anda">
+            <input type="number" placeholder="Masukan Nomor Hp Anda">
+            <input type="submit" value="Kirim" style="background-color: #ffde3e;border-radius: 5px; cursor: pointer;">
+            <p>Atau Dengan</p>
+            <a href="index.html" style="margin: 0px;">
+                <button><img src="img/Google.png" alt="">Daftar Dengan Google</button>
+            </a>
+        </form>
+    </div>
+</body>
+</html>

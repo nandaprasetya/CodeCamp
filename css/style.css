@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/chillax');
 @font-face {
     font-family: poppins;
     src: url('../fonts/Poppins/Poppins-Regular.ttf'),
@@ -52,16 +53,25 @@ nav h1{
     display: flex;
 }
 
-.nav-menu a{
+#nav-btn{
+    width: 30px;
+    height: 30px;
+}
+
+.nav-menu p{
     color: #3d3d3d;
-    /* font-family: Arial, Helvetica, sans-serif; */
+    cursor: pointer;
     font-weight: 600;
     text-decoration: none;
     letter-spacing: 0.3px;
     margin: 0px 10px;
 }
 
-.nav-menu a:hover{
+#nav-btn{
+    display: none;
+}
+
+.nav-menu p:hover{
     color: #f7b500;
     transition: 0.5s ease;
 }
@@ -308,7 +318,7 @@ nav h1{
 }
 
 .slider li img{
-    width: 130px;
+    width: 50%;
     /* height: 50px; */
     object-fit: contain;
     filter: grayscale(100%);
@@ -347,15 +357,13 @@ nav h1{
 }
 
 .box-kelas{
-    width: 600px;
+    width: 500px;
     height: 100%;
     padding: 2%;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0px 0px 4px #cacaca;
-    margin: 20px;
-    top: 0;
-    position: sticky;
+    margin: 0px 20px 20px;
 }
 
 .box-kelas img{
@@ -379,15 +387,16 @@ nav h1{
     font-size: 14px;
 }
 
-.box-kelas a{
-    width: fit-content;
-    text-decoration: none;
-    background-color: #f7b500;
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
+.info-kelas img{
+    width: 17px;
+    margin-right: 8px;
+}
+
+.info-kelas p{
+    margin: 0px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f7b500;
 }
 
 .heading-area-faq{
@@ -418,7 +427,8 @@ nav h1{
 }
 
 .faq-slider{
-    width: 45vw;
+    min-width: 45vw;
+    width: 100%;
     background-color: #f5f5f5;
     padding: 20px 35px;
     border-radius: 15px;
@@ -458,4 +468,656 @@ nav h1{
 .faq-slider.faq-slider-open{
     border-radius: 15px 15px 0px 0px;
     transition: 0.5s ease;
+}
+
+.not-found{
+    font-family: 'Chillax', sans-serif;
+    color: red;
+}
+
+.search{
+    width: 100%;
+    position: sticky;
+    top: 70px;
+    z-index: 998;
+    background-color: #fff;
+    padding: 30px 3%;
+    box-shadow: 0px 5px 10px #f5f5f5;
+}
+
+
+.search input{
+    border: none;
+    background-color: #ebebeb;
+    padding: 10px 10px;
+    outline: none;
+    margin: 0px;
+}
+
+.area-search{
+    width: fit-content;
+}
+
+#search-btn{
+    padding: 10px;
+    border: none;
+    background-color: #cacaca;
+}
+
+#search-btn img{
+    margin: 0px;
+    width: 20px;
+}
+
+#sorting{
+    border-radius: 20px;
+    width: 200px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1.5px solid #000;
+}
+
+.text-style-allcaps {
+    text-transform: uppercase;
+}
+
+.footer{
+    width: 100%;
+    height: fit-content;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    background-color: #161717;
+}
+
+.footer-above{
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-above .heading h1{
+    letter-spacing: -4px;
+    font-size: 122px;
+    font-weight: 400;
+    line-height: 100%;
+    font-family: 'Chillax', sans-serif;
+}
+
+.footer-above .heading h3{
+    font-family: 'Chillax', sans-serif;
+    color: #b3b3b3;
+}
+
+.footer-middle{
+    height: 100%;
+}
+
+.footer-middle h3{
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0 0 40px 0;
+}
+
+.footer-grid{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-column{
+    width: 280px;
+    height: 275px;
+    text-align: left;
+    display: flex;  
+    flex-direction: column;
+}
+
+.footer-column .nav{
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column .nav a{
+    text-decoration: none;
+    color: #ffffff99;
+    font-size: 14px;
+    padding: 0 0 20px 0;
+    width: fit-content;
+}
+
+.footer-column .nav a:after{
+    border-bottom: 6px solid red
+}
+
+.footer-column .nav a:hover:after{
+    
+}
+
+.button-group {
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.button-group img{
+    filter: invert(100%);
+    width: 18px;
+    height: auto;
+    padding: 0 0 20px 0;
+}
+
+.materi{
+    width: 100%;
+    height: 100vh;
+    padding-top: 70px;
+}
+
+.area-materi{
+    width: 75%;
+    height: 100%;
+    overflow: auto;
+    border-right: 1px solid #ebebeb;
+}
+
+.inner-materi{
+    width: 80%;
+}
+
+.area-materi::-webkit-scrollbar{
+    width: 14px;
+}
+
+.area-materi::-webkit-scrollbar-thumb{
+    background-color: #b3b3b3;
+}
+
+.area-materi::-webkit-scrollbar-track{
+    background-color: rgba(255, 255, 255, 0);
+}
+.area-materi img{
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+.area-materi p{
+    line-height: 2;
+    color: #787878;
+}
+
+.area-demo{
+    width: 100%;
+    padding: 3% ;
+    background-color: #ebebeb;
+    border-radius: 10px;
+}
+
+.area-demo h5{
+    padding: 10px;
+    background-color: #f7a900;
+    border-radius: 10px;
+    width: fit-content;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    margin: 15px 0px;
+}
+
+.box-demo{
+    width: 95%;
+    padding: 5px 10px;
+    background-color: #fff;
+    border-left: 3px solid #f7b500;
+    overflow: auto;
+}
+
+.box-demo p{
+    margin: 0px;
+    color: #000;
+    line-height: normal;
+}
+
+.box-demo .text-tag{
+    color: brown;
+}
+
+.box-demo .icon-text{
+    color: blue;
+}
+
+.area-nav-materi{
+    width: 25%;
+    background-color: #fafafa;
+}
+
+.header-nav-materi{
+    width: 100%;
+    height: fit-content;
+    border-bottom: 1px solid #cacaca;
+    padding: 4% 0px;
+    background-color: #fff;
+}
+
+.header-nav-materi h3{
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.box-nav-materi{
+    width: 90%;
+    height: fit-content;
+    background-color: #ebebeb;
+    cursor: pointer;
+    margin:10px 0px ;
+}
+
+.case-nav-number{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5B0888;
+}
+
+.box-nav-materi h3{
+    font-size: 23px;
+    margin: 0px;
+    text-align: center;
+    font-family: bebas neue;
+    color: #fff;
+}
+
+.box-nav-materi p{
+    margin: 0;
+    width: max-content;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.area-next-prev h3{
+    padding: 15px;
+    background-color: #f7a900;
+    color: #fff;
+    font-size: 15px;
+    margin: 50px 0px;
+}
+
+.outer-modul{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(152, 152, 152, 0.5);
+    transition: 0.7s ease;
+}
+
+.area-modul{
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    transition: 0.7s ease-in;
+    transform: translateY(150%);
+}
+
+#exit-modul{
+    width: 100%;
+    height: 100vh;
+}
+
+#modul-kelas{
+    display: none;
+    padding: 15px;
+    background-color: #f7dd00;
+    position: fixed;
+    z-index: 999;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 50%;
+}
+
+#modul-kelas img{
+    width: 25px;
+    height: 25px;
+}
+
+.area-nav{
+    width: 40%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: 0.7s ease;
+}
+
+.area-nav.active{
+    transform: translateX(0%);
+    transition: 0.7s ease;
+}
+
+.area-nav img{
+    width: 25px;
+    height: 25px;
+}
+
+.area-nav a{
+    width: 80%;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-family: bebas neue;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 10px;
+    background-color: #f7a500;
+}
+
+.program-player{
+    background-color: #f7a5001f;
+    min-height: 100vh;
+}
+
+.editing-area{
+    width: 60%;
+    height: 100%;
+}
+
+.area-header-editing h1{
+    font-size: 18px;
+    font-weight: 800;
+    margin:0px 10px 0px 0px;
+    padding: 10px 20px;
+    border-radius: 10px 10px 0px 0px;
+    cursor: pointer;
+}
+
+.output{
+    font-size: 18px;
+    font-weight: 800;
+    padding: 10px 20px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #fff;
+    margin: 0px;
+}
+
+.outer-editing{
+    position: relative;
+}
+
+.outer-editing textarea{
+    width: 100%;
+    resize: none;
+    outline: none;
+    height: 70vh;
+    background-color: #fff;
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+    transition: 0.5s ease;
+}
+
+#editing-html, #editing-css, #editing-js{
+    position: absolute;
+}
+
+.editing-active{
+    background-color: #fff;
+}
+
+.area-hasil{
+    height: 100%;
+    width: 38%;
+}
+
+#area-hasil{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0px 0px 10px 10px;
+    height: 70vh;
+    overflow: auto;
+}
+
+#full-size, #running-program{
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0px;
+    background-color: #f7a500;
+    padding: 10px 35px;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.form-editing-nonactive{
+    clip-path: inset(0 0 100% 0);
+    background-color: #000;
+    transition: 0.5s ease;
+}
+
+
+
+@media screen and (max-width:998px) {
+    .area-nav-materi{
+        display: none !important;
+    }
+
+    .inner-materi{
+        width: 90%;
+    }
+
+    .area-modul{
+        display: flex;
+    }
+    #modul-kelas{
+        display: block;
+    }
+    
+    .area-program{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center !important;
+    }
+
+    .outer-editing textarea{
+        height: 35vh;
+    }
+
+    .area-hasil{
+        height: 35vh;
+        width: 90%;
+    }
+    .editing-area{
+        margin-top: 10px;
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .nav{
+        padding: 0px 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #nav-btn{
+        display: block;
+    }
+
+    .nav-menu{
+        display: none;
+    }
+
+    nav .login{
+        display: none !important;
+    }
+
+    .area-fitur, .promo, .bottom-area-faq{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inner-area-fitur{
+        width: 80%;
+    }
+
+    .text-promo{
+        margin: 20px 0px 20px 20px;
+        width: 50%;
+    }
+    .inner-faq{
+        width: 80%;
+    }
+
+    .faq-slider{
+        min-width: 100%;
+    }
+
+    .footer-above .heading h1{
+        font-size: 80px;
+    }
+
+    .footer-column{
+        width: fit-content;
+    }
+
+    .footer-column .nav{
+        height: fit-content;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .text-home{
+        width: 80%;
+    }
+    .text-home h1{
+        font-size: 30px;
+        margin: 5% 0px;
+    }
+
+    .text-home p{
+        font-size: 13px;
+    }
+
+    .text-home h6{
+        font-size: 14px;
+    }
+
+    .text-home a{
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+
+    .text-home a img{
+        width: 15px;
+    }
+    .area-counter-up{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .area-counter-up span{
+        width: 90%;
+        height: 1px;
+        margin: 10px 0px;
+    }
+
+    .heading-area-faq{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heading-area-faq h1, .heading-area-faq p{
+        width: 80%;
+    }
+
+    .box-kelas{
+        width: 280px;
+        flex-direction: column;
+    }
+
+    .box-kelas .inner-kelas{
+        width: 80%;
+    }
+
+    .text-promo{
+        width: 80%;
+    }
+
+    .footer-above .heading h1{
+        font-size: 40px;
+    }
+
+    .footer-grid{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-middle h3{
+        font-size: 18px;
+    }
+
+    .search{
+        display: flex;
+        flex-direction: column;
+        position:static;
+        z-index: 1;
+        top: 0;
+    }
+
+    .area-search{
+        margin: 10px 0px;
+    }
+
+    #sorting{
+        font-size: 12px;
+        margin: 10px 0px;
+    }
+
+    .materi{
+        height: 100%;
+    }
+
+    .materi p{
+        font-size: 13px;
+    }
+
+    .area-materi{
+        width: 95%;
+        border: none;
+    }
+
+    .area-modul{
+        width: 90%;
+    }
+
+    .area-nav{
+        width: 100%;
+    }
+
+    .area-header-editing h1, #running-program, .output{
+        font-size: 11px;
+        padding: 8px 10px;
+    }
 }

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Program | CodeCamp</title>
+    <link rel="shortcut icon" href="img/logo/Codecamp.png" type="image/x-icon">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,10 +14,115 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+    <nav class="nav">
+        <h1>CodeCamp</h1>
+        <div class="nav-menu">
+            <p id="nav-home">Beranda</p>
+            <p id="nav-program">Program</p>
+            <p id="nav-kelas">Kelas</p>
+            <p id="nav-kontak">Kontak</p>
+        </div>
+        <div class="login d-flex">
+          <a href="login.html">Masuk</a>
+          <a href="signup.html">Daftar</a>
+        </div>
+        <img src="img/icons/menu.png" alt="" id="nav-btn">
+      </nav>
+      <div class="area-nav d-flex flex-column align-items-center justify-content-around">
+        <div class="area-close-nav container d-flex justify-content-end">
+          <img id="nav-close" src="img/icons/close.png" alt="">
+        </div>
+            <p id="nav-home-res">Beranda</p>
+            <p id="nav-program-res">Program</p>
+            <p id="nav-kelas-res">Kelas</p>
+            <p id="nav-kontak-res">Kontak</p>
+            <a href="login.html">Masuk</a>
+            <a href="signup.html">Daftar</a>
+      </div>
+    <div class="container-fluid p-ats">
+        <div class="search d-flex justify-content-between align-items-center">
+            <div class="area-search d-flex justify-content-center align-items-center">
+                <input type="text" id="field-search" placeholder="cari kelas">
+                <button id="search-btn">
+                    <img src="img/icons/magnifying-glass.png" alt="">
+                </button>
+            </div>
+            <div class="sorting">
+                <select name="" id="sorting">
+                    <option value="semua">Semua Kelas</option>
+                    <option value="front-end">Front-end Web</option>
+                    <option value="back-end">Back-end</option>
+                    <option value="android">Android Developer</option>
+                    <option value="ios">Ios Developer</option>
+                    <option value="desktop">Desktop App</option>
+                    <option value="machine">Machine Learning</option>
+                </select>
+            </div>
+        </div>
+        <div class="area-kelas p-ats container-fluid d-flex flex-wrap justify-content-center align-items-center" id="hasil">
 
-    <input type="text" id="field">
-    <button id="kirim">KIRIM</button>
-    <h1 id="hasil"></h1>
+        </div>
+        <div class="footer p-ats">
+            <div class="footer-above padding-global">
+                <div class="container">
+                    <div class="heading">
+                        <h3>| CodeCamp Tagline |</h3>
+                        <h1>Kembangkan skill coding mu.</h1>
+                    </div>
+                    </div>
+            </div>
+            <div class="footer-middle">
+                <div class="padding-top">
+                    <div class="footer-grid">
+                        <div class="footer-column">
+                            <h3>CodeCamp.</h3>
+                            <div class="nav">
+                                <div class="button-group">
+                                    <img src="img/icons/instagram.png" alt="">
+                                    <a href="">INSTAGRAM</a>
+                                </div>
+                                <div class="button-group">
+                                    <img src="img/icons/whatsapp.png" alt="">
+                                    <a href="">WHATSAPP</a>
+                                </div>
+                                <div class="button-group">
+                                    <img src="img/icons/facebook.png" alt="">
+                                    <a href="">FACEBOOK</a>
+                                </div>
+                                <div class="button-group">
+                                    <img src="img/icons/google.png" alt="">
+                                    <a href="">GOOGLE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-column">
+                            <h3>HALAMAN</h3>
+                            <div class="nav">
+                                <a href="">beranda</a>
+                                <a href="">program</a>
+                                <a href="">kelas</a>
+                                <a href="">alur belajar</a>
+                            </div>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Lorem</h3>
+                            <div class="nav">
+                                <a href="">Lorem</a>
+                                <a href="">Lorem ipsun</a>
+                                <a href="">Lorem</a>
+                                <a href="">Lorem</a>
+                                <a href="">Lorem ipsun</a>
+                                <a href="">Lorem</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
     <script src="plugin/jquery-3.5.1.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
@@ -24,32 +130,121 @@
       crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
     <script>
-        let arrays = ['test','test1','test2','test3','test4','test5'];
         let programArrays = [
-            {name : "HTML", kategori: "Front-end"},
-            {name : "CSS", kategori: "Front-end"},
-            {name : "Javascript Dasar", kategori: "Front-end"},
-            {name : "Javascript Lanjutan", kategori: "Front-end"},
-            {name : "PHP", kategori: "backend"},
+            {name : "HTML", link:"HTML", kategori: "Front-end", gambar: "img/Class html.png"},
+            {name : "CSS", link:"CSS", kategori: "Front-end", gambar: "img/Class css.png"},
+            {name : "Javascript Dasar", link:"Javascript-Dasar", kategori: "Front-end", gambar: "img/Class javascript.png"},
+            {name : "Javascript Lanjutan Front-end", link:"Javascript-Lanjutan-Front-end", kategori: "Front-end", gambar: "img/Class javascript.png"},
+            {name : "Javascript Lanjutan Back-end", link:"Javascript-Lanjutan-Back-end", kategori: "Back-end", gambar: "img/Class javascript.png"},
+            {name : "PHP", kategori: "Back-end", link:"PHP", gambar: "img/Class php.png"},
+            {name : "Ruby", kategori: "Back-end", link:"Ruby", gambar: "img/Class ruby.png"},
+            {name : "Kotlin", kategori: "Android", link:"Kotlin", gambar: "img/Class kotlin.png"},
+            {name : "Dart", kategori: "Android", link:"Dart", gambar: "img/Class dart.png"},
+            {name : "Swift", kategori: "Ios", link:"Swift", gambar: "img/Class swift.png"},
+            {name : "Java", kategori: "Desktop", link:"Java", gambar: "img/Class java.png"},
+            {name : "Python", kategori: "Machine", link:"Python", gambar: "img/Class python.png"},
         ];
 
+        programArrays.forEach(function(program){
+            $("#hasil").append('<div id="link-kelas-'+program.link+'" class="box-kelas d-flex  justify-content-evenly align-items-center">'+ 
+                        '<img src="'+ program.gambar +'" alt="">'+
+                            '<div class="inner-kelas d-flex flex-column justify-content-evenly">'+
+                                '<h1>'+ program.name +'</h1>'+
+                                '<p>Pelajari struktur dasar HTML untuk memulai pembelajaran web development.</p>'+
+                                '<div class="info-kelas d-flex justify-content-around align-items-center">'+
+                                    '<div class="d-flex align-items-center">'+
+                                        '<img src="img/icons/time-left.png" alt="">'+
+                                        '<p>30 Jam</p>'+
+                                    '</div>'+
+                                    '<div class="d-flex align-items-center">'+
+                                    '<img src="img/icons/multiple-users-silhouette.png" alt="">'+
+                                    '<p>59.9K Siswa</p>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>'+
+                        '</div>');
+                });
         // AREA TESTING PROGRAM
         function search(){
-            let nilai = $('#field').val();
-            
-            for(var i = 0; i < programArrays.length; i++){
-                if(programArrays[i].name.toLowerCase().indexOf(nilai) !== -1){
-                    console.log(programArrays[i].name);       
+            let nilai = $('#field-search').val();
+            let hasilsearch = false;
+            $("#hasil").empty();
+            programArrays.forEach(function(program){
+                if(program.name.toLowerCase().indexOf(nilai) !== -1){
+                    $("#hasil").append('<div id="link-kelas-'+program.link+'" class="box-kelas d-flex  justify-content-evenly align-items-center">'+ 
+                        '<img src="'+ program.gambar +'" alt="">'+
+                            '<div class="inner-kelas d-flex flex-column justify-content-evenly">'+
+                                '<h1>'+ program.name +'</h1>'+
+                                '<p>Pelajari struktur dasar HTML untuk memulai pembelajaran web development.</p>'+
+                                '<div class="info-kelas d-flex justify-content-around align-items-center">'+
+                                    '<div class="d-flex align-items-center">'+
+                                        '<img src="img/icons/time-left.png" alt="">'+
+                                        '<p>30 Jam</p>'+
+                                    '</div>'+
+                                    '<div class="d-flex align-items-center">'+
+                                    '<img src="img/icons/multiple-users-silhouette.png" alt="">'+
+                                    '<p>59.9K Siswa</p>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>'+
+                        '</div>');
+                        hasilsearch = true;
                 }
+            });
+            if(hasilsearch == false){
+                $('#hasil').append('<h1 class="not-found">OOPs Hasil Tidak Ditemukan</h1>')
             }
         }
-        $('#kirim').click(search);
+        $('#field-search').on("input",search);
+        $('#search-btn').click(search);
+        $('#sorting').change(function(){
+            let nilaisorting = $(this).val();
+            $("#hasil").empty();
+            if(nilaisorting == "semua"){
+                programArrays.forEach(function(program){
+            $("#hasil").append('<div id="link-kelas-'+program.link+'" class="box-kelas d-flex  justify-content-evenly align-items-center">'+ 
+                        '<img src="'+ program.gambar +'" alt="">'+
+                            '<div class="inner-kelas d-flex flex-column justify-content-evenly">'+
+                                '<h1>'+ program.name +'</h1>'+
+                                '<p>Pelajari struktur dasar HTML untuk memulai pembelajaran web development.</p>'+
+                                '<div class="info-kelas d-flex justify-content-around align-items-center">'+
+                                    '<div class="d-flex align-items-center">'+
+                                        '<img src="img/icons/time-left.png" alt="">'+
+                                        '<p>30 Jam</p>'+
+                                    '</div>'+
+                                    '<div class="d-flex align-items-center">'+
+                                    '<img src="img/icons/multiple-users-silhouette.png" alt="">'+
+                                    '<p>59.9K Siswa</p>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>'+
+                        '</div>');
+                });
+                }else{
+                    programArrays.forEach(function(program){
+                    if(program.kategori.toLowerCase().indexOf(nilaisorting) !== -1){
+                    $("#hasil").append('<div id="link-kelas-'+program.link+'" class="box-kelas d-flex  justify-content-evenly align-items-center">'+ 
+                        '<img src="'+ program.gambar +'" alt="">'+
+                            '<div class="inner-kelas d-flex flex-column justify-content-evenly">'+
+                                '<h1>'+ program.name +'</h1>'+
+                                '<p>Pelajari struktur dasar HTML untuk memulai pembelajaran web development.</p>'+
+                                '<div class="info-kelas d-flex justify-content-around align-items-center">'+
+                                    '<div class="d-flex align-items-center">'+
+                                        '<img src="img/icons/time-left.png" alt="">'+
+                                        '<p>30 Jam</p>'+
+                                    '</div>'+
+                                    '<div class="d-flex align-items-center">'+
+                                    '<img src="img/icons/multiple-users-silhouette.png" alt="">'+
+                                    '<p>59.9K Siswa</p>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>'+
+                        '</div>');
+                }
+            });
+                }
+        })
     </script>
+      <script src="js/link.js"></script>
 </body>
 </html>
-<!-- 
-function check(array){
-    return programArrays == nilai;
-}
-
-let hasil = programArrays.filter(check); -->

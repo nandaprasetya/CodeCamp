@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCamp | Javascript Dasar</title>
+    <link rel="shortcut icon" href="img/logo/Codecamp.png" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <h1>CodeCamp</h1>
+    <div class="nav-menu">
+        <p id="nav-home">Beranda</p>
+        <p id="nav-program">Program</p>
+        <p id="nav-kelas">Kelas</p>
+        <p id="nav-kontak">Kontak</p>
+    </div>
+    <div class="login d-flex">
+      <a href="login.html">Masuk</a>
+      <a href="signup.html">Daftar</a>
+    </div>
+    <img src="img/icons/menu.png" alt="" id="nav-btn">
+  </nav>
+  <div class="area-nav d-flex flex-column align-items-center justify-content-around">
+    <div class="area-close-nav container d-flex justify-content-end">
+      <img id="nav-close" src="img/icons/close.png" alt="">
+    </div>
+        <p id="nav-home-res">Beranda</p>
+        <p id="nav-program-res">Program</p>
+        <p id="nav-kelas-res">Kelas</p>
+        <p id="nav-kontak-res">Kontak</p>
+        <a href="login.html">Masuk</a>
+        <a href="signup.html">Daftar</a>
+  </div>
+  <div class="program-player d-flex justify-content-between p-ats">
+    <div class="area-program container d-flex justify-content-between align-items-end" style="padding-top: 20px;">
+        <div class="editing-area d-flex flex-column">
+            <div class="area-header-editing d-flex justify-content-between">
+                <div class="d-flex">
+                    <h1 id="html-btn" class="editing-active">Html</h1>
+                    <h1 id="css-btn">Css</h1>
+                    <h1 id="js-btn">Javascript</h1>
+                </div>
+                <h1 id="running-program">Run</h1>
+            </div>
+            <div class="outer-editing d-flex flex-column">
+                <textarea id="editing-html"></textarea>
+                <textarea id="editing-css" class="form-editing-nonactive"></textarea>
+                <textarea id="editing-js" class="form-editing-nonactive"></textarea>
+            </div>
+        </div>
+        <div class="area-hasil d-flex flex-column align-items-end">
+            <div style="width: 100%;" class="d-flex justify-content-start">
+                <h1 class="output">Output</h1>
+            </div>
+            <div id="area-hasil">
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="plugin/jquery-3.5.1.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
+      <script src="js/link.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+        $("#html-btn").click(function(){
+            $("#html-btn").addClass("editing-active");
+            $("#css-btn").removeClass("editing-active");
+            $("#js-btn").removeClass("editing-active");
+            $("#editing-html").removeClass("form-editing-nonactive");
+            $("#editing-css").addClass("form-editing-nonactive");
+            $("#editing-js").addClass("form-editing-nonactive");
+        });
+        $("#css-btn").click(function(){
+            $("#css-btn").addClass("editing-active");
+            $("#html-btn").removeClass("editing-active");
+            $("#js-btn").removeClass("editing-active");
+            $("#editing-html").addClass("form-editing-nonactive");
+            $("#editing-css").removeClass("form-editing-nonactive");
+            $("#editing-js").addClass("form-editing-nonactive");
+        });
+        $("#js-btn").click(function(){
+            $("#css-btn").removeClass("editing-active");
+            $("#html-btn").removeClass("editing-active");
+            $("#js-btn").addClass("editing-active");
+            $("#editing-html").addClass("form-editing-nonactive");
+            $("#editing-css").addClass("form-editing-nonactive");
+            $("#editing-js").removeClass("form-editing-nonactive");
+        });
+
+        $("#running-program").click(function(){
+            let valuehtml = $("#editing-html").val();
+            let valuecss = $("#editing-css").val();
+            let valuejs =$("#editing-js").val();
+            let isicss = document.createElement("style");
+            let isijs = document.createElement("script");
+            isijs.type = "text/javascript";
+            isijs.text = valuejs;
+            isicss.textContent   = "#area-hasil "+ valuecss ;
+            $("#area-hasil").empty();
+            $("#area-hasil").append(valuehtml,isicss, isijs);
+        });
+    </script>
+  </body>
+</html>

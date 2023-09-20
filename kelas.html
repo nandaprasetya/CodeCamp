@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCamp | Javascript Dasar</title>
+    <link rel="shortcut icon" href="img/logo/Codecamp.png" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <h1>CodeCamp</h1>
+    <div class="nav-menu">
+        <p id="nav-home">Beranda</p>
+        <p id="nav-program">Program</p>
+        <p id="nav-kelas">Kelas</p>
+        <p id="nav-kontak">Kontak</p>
+    </div>
+    <div class="login d-flex">
+      <a href="login.html">Masuk</a>
+      <a href="signup.html">Daftar</a>
+    </div>
+    <img src="img/icons/menu.png" alt="" id="nav-btn">
+  </nav>
+  <div class="area-nav d-flex flex-column align-items-center justify-content-around">
+    <div class="area-close-nav container d-flex justify-content-end">
+      <img id="nav-close" src="img/icons/close.png" alt="">
+    </div>
+        <p id="nav-home-res">Beranda</p>
+        <p id="nav-program-res">Program</p>
+        <p id="nav-kelas-res">Kelas</p>
+        <p id="nav-kontak-res">Kontak</p>
+        <a href="login.html">Masuk</a>
+        <a href="signup.html">Daftar</a>
+  </div>
+    <div class="materi d-flex justify-content-center">
+      <div class="area-materi d-flex flex-column align-items-center">
+        <div class="inner-materi" id="isi-materi">
+          <div>
+              <h1 style="text-align: center;">Pengenalan Javascript</h1>
+              <div class="my-3"></div>
+              <h2>Apa Itu Javascript</h2>
+              <img src="img/logo/javascript.png" alt="">
+              <p>JavaScript adalah bahasa pemrograman yang digunakan dalam pengembangan website agar lebih dinamis dan interaktif. Kalau sebelumnya kamu hanya mengenal HTML dan CSS, nah sekarang kamu jadi tahu bahwa JavaScript dapat meningkatkan fungsionalitas pada halaman web. Bahkan dengan JavaScript ini kamu bisa membuat aplikasi, tools, atau bahkan game pada web. <br> <br> Bicara teknis, JavaScript atau kita singkat menjadi JS merupakan bahasa pemrograman jenis interpreter, sehingga kamu tidak memerlukan compiler untuk menjalankannya. JavaScript memiliki fitur-fitur seperti berorientasi objek, client-side, high-level programming, dan loosely typed.</p>
+              <h2>Sejarah Javascript</h2>
+              <p>Pada tahun 1994 JavaScript mulai dikenal, pada saat itu web dan internet sudah mulai berkembang. JavaScript didesain oleh Brendan Eich yang merupakan karyawan Netscape. Transformasi nama JavaScript, dimulai dari Mocha, Mona, LiveScript, hingga akhirnya resmi bernama JavaScript. <br> <br>
+                  Versi awal bahasa JS hanya dipakai di kalangan Netscape beserta dengan fungsionalitas pun yang masih terbatas. Singkat cerita pada tahun 1996 JavaScript secara resmi dinamakan sebagai ECMAScript. ECMAScript 2 dikembangkan pada tahun 1998 yang dilanjutkan dengan ECMAScript 3 setahun kemudian. ECMAScript terus dikembangkan sampai akhirnya menjadi JavaScript atau JS hingga saat ini. Pada tahun 2016, 92% web diketahui telah menggunakan JavaScript. Itulah mengapa JavaScript atau JS terus berkembang.</p>
+          </div>
+        </div>
+        <div class="area-next-prev container d-flex justify-content-between">
+          <div id="prev">
+            <h3>sebelumnya</h3>
+          </div>
+          <div id="next">
+            <h3>Selanjutnya</h3>
+          </div>
+        </div>
+      </div>  
+      <div class="area-nav-materi d-flex flex-column align-items-center">
+        <div class="header-nav-materi">
+          <h3>Daftar Modul</h3>
+        </div>
+        <div id="halaman-0" class="box-nav-materi d-flex align-items-center">
+          <div style="background-color: #3085C3;" class="case-nav-number">
+            <h3>1</h3>
+          </div>
+          <p>Penganalan Javascript</p>
+        </div>
+        <div id="halaman-1" class="box-nav-materi d-flex align-items-center">
+          <div style="background-color: #5B0888;" class="case-nav-number">
+            <h3>2</h3>
+          </div>
+          <p>Cara Penggunaan</p>
+        </div>
+        <div id="halaman-2" class="box-nav-materi d-flex align-items-center">
+          <div style="background-color: #125C13;" class="case-nav-number">
+            <h3>3</h3>
+          </div>
+          <p>Variable</p>
+        </div>
+        <div id="halaman-3" class="box-nav-materi d-flex align-items-center">
+          <div style="background-color: #952323;" class="case-nav-number">
+            <h3>4</h3>
+          </div>
+          <p>Operator</p>
+        </div>
+        <div id="halaman-4" class="box-nav-materi d-flex align-items-center">
+          <div style="background-color: #0E21A0;" class="case-nav-number">
+            <h3>5</h3>
+          </div>
+          <p>Percabangan</p>
+        </div>
+        <div id="halaman-5" class="box-nav-materi d-flex align-items-center">
+          <div style="background-color: #E55807;" class="case-nav-number">
+            <h3>6</h3>
+          </div>
+          <p>Perulangan</p>
+        </div>
+      </div>
+    </div>
+    <div id="modul-kelas">
+        <img src="img/icons/cube.png" alt="">
+    </div>
+    <div class="outer-modul">
+    <div class="area-modul">
+      <div class="header-nav-materi">
+        <h3>Daftar Modul</h3>
+      </div>
+      <div id="halaman-0-respon" class="box-nav-materi d-flex align-items-center">
+        <div style="background-color: #3085C3;" class="case-nav-number">
+          <h3>1</h3>
+        </div>
+        <p>Penganalan Javascript</p>
+      </div>
+      <div id="halaman-1-respon" class="box-nav-materi d-flex align-items-center">
+        <div style="background-color: #5B0888;" class="case-nav-number">
+          <h3>2</h3>
+        </div>
+        <p>Cara Penggunaan</p>
+      </div>
+      <div id="halaman-2-respon" class="box-nav-materi d-flex align-items-center">
+        <div style="background-color: #125C13;" class="case-nav-number">
+          <h3>3</h3>
+        </div>
+        <p>Variable</p>
+      </div>
+      <div id="halaman-3-respon" class="box-nav-materi d-flex align-items-center">
+        <div style="background-color: #952323;" class="case-nav-number">
+          <h3>4</h3>
+        </div>
+        <p>Operator</p>
+      </div>
+      <div id="halaman-4-respon" class="box-nav-materi d-flex align-items-center">
+        <div style="background-color: #0E21A0;" class="case-nav-number">
+          <h3>5</h3>
+        </div>
+        <p>Percabangan</p>
+      </div>
+      <div id="halaman-5-respon" class="box-nav-materi d-flex align-items-center">
+        <div style="background-color: #E55807;" class="case-nav-number">
+          <h3>6</h3>
+        </div>
+        <p>Perulangan</p>
+      </div>
+    </div>
+    <div id="exit-modul"></div>
+  </div>
+    </body>
+
+
+    <script src="plugin/jquery-3.5.1.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
+      <script src="js/link.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+      var arrays = ['<div><h1>Pengenalan Javascript</h1><h2>Apa Itu Javascript</h2><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" alt=""><p>JavaScript adalah bahasa pemrograman yang digunakan dalam pengembangan website agar lebih dinamis dan interaktif. Kalau sebelumnya kamu hanya mengenal HTML dan CSS, nah sekarang kamu jadi tahu bahwa JavaScript dapat meningkatkan fungsionalitas pada halaman web. Bahkan dengan JavaScript ini kamu bisa membuat aplikasi, tools, atau bahkan game pada web. <br> <br> Bicara teknis, JavaScript atau kita singkat menjadi JS merupakan bahasa pemrograman jenis interpreter, sehingga kamu tidak memerlukan compiler untuk menjalankannya. JavaScript memiliki fitur-fitur seperti berorientasi objek, client-side, high-level programming, dan loosely typed.</p><h2>Sejarah Javascript</h2><p>Pada tahun 1994 JavaScript mulai dikenal, pada saat itu web dan internet sudah mulai berkembang. JavaScript didesain oleh Brendan Eich yang merupakan karyawan Netscape. Transformasi nama JavaScript, dimulai dari Mocha, Mona, LiveScript, hingga akhirnya resmi bernama JavaScript. <br> <br>Versi awal bahasa JS hanya dipakai di kalangan Netscape beserta dengan fungsionalitas pun yang masih terbatas. Singkat cerita pada tahun 1996 JavaScript secara resmi dinamakan sebagai ECMAScript. ECMAScript 2 dikembangkan pada tahun 1998 yang dilanjutkan dengan ECMAScript 3 setahun kemudian. ECMAScript terus dikembangkan sampai akhirnya menjadi JavaScript atau JS hingga saat ini. Pada tahun 2016, 92% web diketahui telah menggunakan JavaScript. Itulah mengapa JavaScript atau JS terus berkembang.</p></div>','<div><h1>Cara Menggunakan</h1><h2>Menggunakan Tag <span class="icon-text">&lt;</span>script<span class="icon-text">&gt;</span> </h2><div class="area-demo"><h4>Contoh</h4><div class="box-demo"><p class="text-tag"><span class="icon-text">&lt;</span>script<span class="icon-text">&gt;</span></p><p><span class="mx-1"></span>document.getElementById("demo").innerHTML = "Hello World";</p><p class="text-tag"><span class="icon-text">&lt;</span>/script<span class="icon-text">&gt;</span></p></div><h5>Coba Kode</h5></div><div class="my-3"></div><h2>Javascript Di <span class="icon-text">&lt;</span>Head<span class="icon-text">&gt;</span> & <span class="icon-text">&lt;</span>Body<span class="icon-text">&gt;</span></h2><p>Anda dapat menempatkan sejumlah skrip dalam dokumen HTML. Skrip dapat ditempatkan di <span class="icon-text">&lt;</span>body<span class="icon-text">&gt;</span>, atau di <span class="icon-text">&lt;</span>head<span class="icon-text">&gt;</span> pada bagian halaman HTML, atau di keduanya.</p><div class="area-demo"><h4>Contoh</h4><div class="box-demo"><p class="text-tag"><span class="icon-text">&lt;</span>!DOCTYPE html<span class="icon-text">&gt;</span></p><p class="text-tag"> <span class="mx-1"></span> <span class="icon-text">&lt;</span>html<span class="icon-text">&gt;</span></p><p class="text-tag"> <span class="mx-2"></span><span class="icon-text">&lt;</span>head<span class="icon-text">&gt;</span></p><p class="text-tag"><span class="mx-3"></span><span class="icon-text">&lt;</span>script<span class="icon-text">&gt;</span></p><p><span class="mx-4"></span>document.getElementById("demo").innerHTML = "Hello World";</p><p class="text-tag"><span class="mx-3"></span><span class="icon-text">&lt;</span>/script<span class="icon-text">&gt;</span></p><p class="text-tag"><span class="mx-2"></span><span class="icon-text">&lt;</span>/head<span class="icon-text">&gt;</span></p><p class="text-tag"><span class="mx-2"></span><span class="icon-text">&lt;</span>body<span class="icon-text">&gt;</span></p><p class="text-tag"><span class="mx-3"></span><span class="icon-text">&lt;</span>script<span class="icon-text">&gt;</span></p><p><span class="mx-4"></span>document.getElementById("demo").innerHTML = "Hello World";</p><p class="text-tag"><span class="mx-3"></span><span class="icon-text">&lt;</span>/script<span class="icon-text">&gt;</span></p><p class="text-tag"><span class="mx-2"></span><span class="icon-text">&lt;</span>/body<span class="icon-text">&gt;</span></p><p class="text-tag"><span class="icon-text">&lt;</span>/html<span class="icon-text">&gt;</span></p></div><h5>Coba Kode</h5></div><div class="my-3"></div><h2>JavaScript External</h2><p>Script juga dapat digunakan pada external. <br>Untuk menggunakan skrip eksternal, masukkan nama file skrip di atribut src(source) dari sebuah &lt;script&gt; tag:</p><div class="area-demo"><h4>Contoh</h4><div class="box-demo"><p class="text-tag"><span class="icon-text">&lt;</span>script <span style="color: #000;">src="script.js"</span><span class="icon-text">&gt;</span><span class="icon-text">&lt;</span>/script<span class="icon-text">&gt;</span></p></div><h5>Coba Kode</h5></div><div class="area-next-prev container d-flex justify-content-between"></div></div>'];
+      let halamansekarang = 0;
+      $('#halaman-0').click(function(){
+        halamansekarang = 0;
+        $("#isi-materi").empty();
+        $("#isi-materi").append(arrays[halamansekarang]);
+      });
+      $('#halaman-1').click(function(){
+        halamansekarang = 1;
+        $("#isi-materi").empty();
+        $("#isi-materi").append(arrays[halamansekarang]);
+      });
+      $('#halaman-2').click(function(){
+        halamansekarang = 2;
+        $("#isi-materi").empty();
+        $("#isi-materi").append(arrays[halamansekarang]);
+      });
+      $('#halaman-3').click(function(){
+        halamansekarang = 3;
+        $("#isi-materi").empty();
+        $("#isi-materi").append(arrays[halamansekarang]);
+      });
+      $('#halaman-4').click(function(){
+        halamansekarang = 4;
+        $("#isi-materi").empty();
+        $("#isi-materi").append(arrays[halamansekarang]);
+      });
+      $('#halaman-5').click(function(){
+        halamansekarang = 5;
+        $("#isi-materi").empty();
+        $("#isi-materi").append(arrays[halamansekarang]);
+      });
+      $('#halaman-0-respon').click(function(){
+        halamansekarang = 0;
+        $("#isi-materi").empty();
+        $("#isi-materi").append(arrays[halamansekarang]);
+      });
+      $('#halaman-1-respon').click(function(){
+        halamansekarang = 1;
+        $("#isi-materi").empty();
+        $("#isi-materi").append(arrays[halamansekarang]);
+      });
+      $('#halaman-2-respon').click(function(){
+        halamansekarang = 2;
+        $("#isi-materi").empty();
+        $("#isi-materi").append(arrays[halamansekarang]);
+      });
+      $('#halaman-3-respon').click(function(){
+        halamansekarang = 3;
+        $("#isi-materi").empty();
+        $("#isi-materi").append(arrays[halamansekarang]);
+      });
+      $('#halaman-4-respon').click(function(){
+        halamansekarang = 4;
+        $("#isi-materi").empty();
+        $("#isi-materi").append(arrays[halamansekarang]);
+      });
+      $('#halaman-5-respon').click(function(){
+        halamansekarang = 5;
+        $("#isi-materi").empty();
+        $("#isi-materi").append(arrays[halamansekarang]);
+      });
+      $("#next").click(function(){
+        halamansekarang = halamansekarang + 1;
+        $("#isi-materi").empty();
+        $("#isi-materi").append(arrays[halamansekarang]);
+      });
+      $("#prev").click(function(){
+        console.log("test");
+        halamansekarang = halamansekarang - 1;
+        console.log(halamansekarang)
+        if(halamansekarang < 0){
+          halamansekarang = 0;
+        }
+        $("#isi-materi").empty();
+        $("#isi-materi").append(arrays[halamansekarang]);
+      });
+
+      $("#exit-modul").click(function(){
+        $('.area-modul').css("transform","translateY(150%)");
+        setTimeout(() => {
+          $('.outer-modul').css("display","none");
+        }, 700);
+      });
+
+      $("#modul-kelas").click(function(){
+        $(".outer-modul").css("display","flex");
+        setTimeout(() => {
+          $('.area-modul').css("transform","translateY(0%)");
+        }, 100);
+      })
+    </script>
+</body>
+</html>
