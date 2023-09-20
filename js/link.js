@@ -2,32 +2,144 @@ let linkhomepage = "index.html";
 let linkprogram = "index.html#program";
 let linkkelas = "program.html";
 let linkdetailkelas = "kelas.html";
+let linktesting = "testing.html"
 
 $("#nav-home").click(function(){
-    window.location.href = linkhomepage;
+    $(".area-animation").css("display","block");
+    setTimeout(() => {
+        $(".area-animation").addClass("active");
+    }, 10);
+    setTimeout(() => {
+        window.location.href = linkhomepage;
+    }, 700);
 });
 
+$("#coba-kode1").click(function(){
+    $(".area-animation").css("display","block");
+    setTimeout(() => {
+        $(".area-animation").addClass("active");
+    }, 10);
+    setTimeout(() => {
+        window.location.href = linktesting;
+    }, 700);
+});
+
+
 $("#nav-program").click(function(){
-    window.location.href = linkprogram;
+    $(".area-animation").css("display","block");
+    setTimeout(() => {
+        $(".area-animation").addClass("active");
+    }, 10);
+    setTimeout(() => {
+        window.location.href = linkprogram;
+    }, 700);
+    $(".area-animation").removeClass("active");
+    setTimeout(() => {
+    $(".area-animation").css("display","none");
+    }, 1400);
 });
 
 $("#nav-kelas").click(function(){
-    window.location.href = linkkelas;
+    $(".area-animation").css("display","block");
+    setTimeout(() => {
+        $(".area-animation").addClass("active");
+    }, 10);
+    setTimeout(() => {
+        window.location.href = linkkelas;
+    }, 700);
 });
+
+$("#link-footer-home").click(function(){
+    $(".area-animation").css("display","block");
+    setTimeout(() => {
+        $(".area-animation").addClass("active");
+    }, 10);
+    setTimeout(() => {
+        window.location.href = linkhomepage;
+    }, 700);
+});
+
+$("#link-footer-program").click(function(){
+    $(".area-animation").css("display","block");
+    setTimeout(() => {
+        $(".area-animation").addClass("active");
+    }, 10);
+    setTimeout(() => {
+        window.location.href = linkprogram;
+    }, 700);
+    $(".area-animation").removeClass("active");
+    setTimeout(() => {
+    $(".area-animation").css("display","none");
+    }, 1400);
+});
+
+$("#link-footer-kelas").click(function(){
+    $(".area-animation").css("display","block");
+    setTimeout(() => {
+        $(".area-animation").addClass("active");
+    }, 10);
+    setTimeout(() => {
+        window.location.href = linkkelas;
+    }, 700);
+});
+
 $("#nav-home-res").click(function(){
-    window.location.href = linkhomepage;
+    $(".area-animation").css("display","block");
+    setTimeout(() => {
+        $(".area-animation").addClass("active");
+    }, 10);
+    setTimeout(() => {
+        window.location.href = linkhomepage;
+    }, 700);
 });
 
 $("#nav-program-res").click(function(){
-    window.location.href = linkprogram;
+    $(".area-animation").css("display","block");
+    setTimeout(() => {
+        $(".area-animation").addClass("active");
+    }, 10);
+    setTimeout(() => {
+        window.location.href = linkprogram;
+    }, 700);
 });
 
 $("#nav-kelas-res").click(function(){
-    window.location.href = linkkelas;
+    $(".area-animation").css("display","block");
+    setTimeout(() => {
+        $(".area-animation").addClass("active");
+    }, 10);
+    setTimeout(() => {
+        window.location.href = linkkelas;
+    }, 700);
+});
+
+$("#link-kelas1").click(function(){
+    $(".area-animation").css("display","block");
+    setTimeout(() => {
+        $(".area-animation").addClass("active");
+    }, 10);
+    setTimeout(() => {
+        window.location.href = linkdetailkelas;
+    }, 700);
+});
+$("#link-kelas2").click(function(){
+    $(".area-animation").css("display","block");
+    setTimeout(() => {
+        $(".area-animation").addClass("active");
+    }, 10);
+    setTimeout(() => {
+        window.location.href = linkdetailkelas;
+    }, 700);
 });
 
 $("#link-kelas-Javascript-Dasar").click(function(){
-    window.location.href = linkdetailkelas;
+    $(".area-animation").css("display","block");
+    setTimeout(() => {
+        $(".area-animation").addClass("active");
+    }, 10);
+    setTimeout(() => {
+        window.location.href = linkdetailkelas;
+    }, 700);
 });
 
 $("#nav-btn").click(function(){
@@ -36,4 +148,4 @@ $("#nav-btn").click(function(){
 
 $("#nav-close").click(function(){
     $(".area-nav").removeClass("active");
-})
+});

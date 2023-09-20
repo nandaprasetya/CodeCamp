@@ -16,8 +16,15 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .box-kelas{
+        opacity: 0;
+    transform: translateY(30%);
+      }
+    </style>
   </head>
   <body>
+    <div class="area-animation"></div>
     <nav class="nav">
       <h1>CodeCamp</h1>
       <div class="nav-menu">
@@ -51,7 +58,7 @@
           CodeCamp adalah Platform belajar Coding Secara Gratis, Mulai
           Perjalanan di Dunia Coding bersama CodeCamp
         </p>
-        <a href="" class="btn-home">JELAJAHI PROGRAM <img src="img/icons/right-arrow.png" alt=""/></a>
+        <a href="index.html#program" class="btn-home">JELAJAHI PROGRAM <img src="img/icons/right-arrow.png" alt=""/></a>
       </div>
       <div class="area-counter-up container-fluid d-flex align-items-center justify-content-evenly">
         <div class="box-counter d-flex flex-column align-items-center">
@@ -174,7 +181,7 @@
         
       </div>
       <div class="area-kelas d-flex flex-column align-items-center justify-content-evenly">
-        <div id="link-kelas" class="box-kelas d-flex  justify-content-evenly align-items-center">
+        <div id="link-kelas1" class="box-kelas d-flex  justify-content-evenly align-items-center">
           <img src="img/Class javascript.png" alt="">
           <div class="inner-kelas d-flex flex-column justify-content-evenly">
             <h1>Kelas Javascript Dasar</h1>
@@ -191,7 +198,7 @@
             </div>
           </div>
         </div>
-        <div id="link-kelas" class="box-kelas d-flex  justify-content-evenly align-items-center">
+        <div id="link-kelas2" class="box-kelas d-flex  justify-content-evenly align-items-center">
           <img src="img/Class html.png" alt="">
           <div class="inner-kelas d-flex flex-column justify-content-evenly">
             <h1>Kelas Struktur HTML</h1>
@@ -284,10 +291,10 @@
                   <div class="footer-column">
                       <h3>Halaman</h3>
                       <div class="nav">
-                          <a href="">beranda</a>
-                          <a href="">program</a>
-                          <a href="">kelas</a>
-                          <a href="">Kontak</a>
+                          <p id="link-footer-home">Beranda</p>
+                          <p id="link-footer-program">Program</p>
+                          <p id="link-footer-kelas">Kelas</p>
+                          <p id="link-footer-kontak">Kontak</p>
                       </div>
                   </div>
                   <div class="footer-column">
@@ -296,7 +303,7 @@
                           <a href="">Faq & Bantuan</a>
                           <a href="">Kebijakan</a>
                           <a href="">Kebijakan Pribadi</a>
-                          <a href="">karir</a>
+                          <a href="">Karir</a>
                       </div>
                   </div>
               </div>
@@ -430,8 +437,73 @@
             }
           });
         }, options);
+        const animationtext1 = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              $(".text-home h1").addClass("fade-animation"); 
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+        const animationtext2 = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              $(".text-home h6").addClass("opacity"); 
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+        const animationtext3 = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              $(".text-home p").addClass("fade-animation"); 
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
 
-        // Elemen yang akan dipantau
+        const animationtext4 = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              $(".text-home a").addClass("fade-animation"); 
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+        const animationtext5 = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              $(".box-fitur").addClass("fade-animation"); 
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+        const animationtext6 = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              $(".box-kelas").addClass("fade-animation"); 
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+
+        const animationtext7 = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              $(".bottom-area-faq img").addClass("fade-animation"); 
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+        const animationtext8 = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              $(".faq-slider").addClass("fade-animation"); 
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+
         const targetcounter1 = document.querySelector("#counter1");
         animationcounter1.observe(targetcounter1);
         const targetcounter2 = document.querySelector("#counter2");
@@ -440,6 +512,22 @@
         animationcounter3.observe(targetcounter3);
         const targetcounter4 = document.querySelector("#counter4");
         animationcounter4.observe(targetcounter4);
+        const targetanimation5 = document.querySelector(".text-home h1");
+        animationtext1.observe(targetanimation5);
+        const targetanimation6 = document.querySelector(".text-home h6");
+        animationtext2.observe(targetanimation6);
+        const targetanimation7 = document.querySelector(".text-home p");
+        animationtext3.observe(targetanimation7);
+        const targetanimation8 = document.querySelector(".text-home a");
+        animationtext4.observe(targetanimation8);
+        const targetanimation9 = document.querySelector(".box-fitur");
+        animationtext5.observe(targetanimation9);
+        const targetanimation10 = document.querySelector(".box-kelas");
+        animationtext6.observe(targetanimation10);
+        const targetanimation11 = document.querySelector(".bottom-area-faq img");
+        animationtext7.observe(targetanimation11);
+        const targetanimation12 = document.querySelector(".faq-slider");
+        animationtext8.observe(targetanimation12);
 
         $('.slider img').mouseenter(function(){
           $('.slider').addClass('stopslider');
