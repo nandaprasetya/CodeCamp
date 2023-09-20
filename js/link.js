@@ -1,6 +1,7 @@
 let linkhomepage = "index.html";
 let linkprogram = "index.html#program";
 let linkkelas = "program.html";
+let linkkontak = "index.html#footer";
 let linkdetailkelas = "kelas.html";
 let linktesting = "testing.html"
 
@@ -12,6 +13,19 @@ $("#nav-home").click(function(){
     setTimeout(() => {
         window.location.href = linkhomepage;
     }, 700);
+});
+$("#nav-kontak").click(function(){
+    $(".area-animation").css("display","block");
+    setTimeout(() => {
+        $(".area-animation").addClass("active");
+    }, 10);
+    setTimeout(() => {
+        window.location.href = linkkontak;
+    }, 700);
+    $(".area-animation").removeClass("active");
+    setTimeout(() => {
+    $(".area-animation").css("display","none");
+    }, 1400);
 });
 
 $("#coba-kode1").click(function(){
